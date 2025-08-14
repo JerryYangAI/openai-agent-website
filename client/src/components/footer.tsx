@@ -1,125 +1,114 @@
-import { Network } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Network, Mail, Phone, MapPin, Linkedin, Twitter, Youtube } from "lucide-react";
+import { Link } from "wouter";
 
 export default function Footer() {
-  const solutions = [
-    "Manufacturing",
-    "Healthcare", 
-    "Automotive",
-    "Finance",
-    "Retail & E-commerce",
-    "Logistics"
-  ];
-
-  const resources = [
-    "Documentation",
-    "API Reference",
-    "Case Studies",
-    "Beta Program",
-    "Support Center",
-    "System Status"
-  ];
-
-  const contact = [
-    "Schedule Demo",
-    "Enterprise Sales",
-    "Partner Program",
-    "Careers"
-  ];
-
   return (
-    <footer className="bg-gray-900 text-white py-16">
+    <footer className="bg-dark-blue text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-4 gap-8">
+        {/* Main Footer Content */}
+        <div className="py-16 grid md:grid-cols-4 gap-8">
           {/* Company Info */}
-          <div>
+          <div className="col-span-1">
             <div className="flex items-center space-x-3 mb-6">
               <div className="w-8 h-8 bg-gradient-to-r from-primary-blue to-accent-green rounded-lg flex items-center justify-center">
                 <Network className="text-white" size={16} />
               </div>
               <span className="font-bold text-xl">OpenAI Agent</span>
             </div>
-            <p className="text-gray-400 text-sm leading-relaxed mb-4">
-              Empowering AI Collaboration, Focusing on Core Innovation. Transform your business with intelligent multi-agent systems.
+            <p className="text-gray-300 mb-6 leading-relaxed">
+              Transform your business with intelligent multi-agent AI systems. 
+              Automate complex workflows and scale your operations with enterprise-grade reliability.
             </p>
-            <p className="text-gray-500 text-xs">
-              openaiagent.ai
-            </p>
+            <div className="flex space-x-4">
+              <Button variant="ghost" size="icon" className="text-gray-300 hover:text-white hover:bg-white/10">
+                <Linkedin size={20} />
+              </Button>
+              <Button variant="ghost" size="icon" className="text-gray-300 hover:text-white hover:bg-white/10">
+                <Twitter size={20} />
+              </Button>
+              <Button variant="ghost" size="icon" className="text-gray-300 hover:text-white hover:bg-white/10">
+                <Youtube size={20} />
+              </Button>
+            </div>
+          </div>
+
+          {/* Product */}
+          <div>
+            <h3 className="font-semibold text-lg mb-6">Product</h3>
+            <ul className="space-y-4">
+              <li><Link href="/features" className="text-gray-300 hover:text-white transition-colors">Features</Link></li>
+              <li><Link href="/industries" className="text-gray-300 hover:text-white transition-colors">Industries</Link></li>
+              <li><Link href="/pricing" className="text-gray-300 hover:text-white transition-colors">Pricing</Link></li>
+              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Documentation</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">API Reference</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">System Status</a></li>
+            </ul>
           </div>
 
           {/* Solutions */}
           <div>
-            <h3 className="font-semibold text-lg mb-4">Solutions</h3>
-            <ul className="space-y-2 text-gray-400 text-sm">
-              {solutions.map((solution, index) => (
-                <li key={index}>
-                  <a href="#" className="hover:text-white transition-colors" data-testid={`link-solution-${solution.toLowerCase().replace(/\s+/g, '-')}`}>
-                    {solution}
-                  </a>
-                </li>
-              ))}
+            <h3 className="font-semibold text-lg mb-6">Solutions</h3>
+            <ul className="space-y-4">
+              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Automotive</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Manufacturing</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Healthcare</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Financial Services</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Retail</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Logistics</a></li>
             </ul>
           </div>
 
-          {/* Resources */}
+          {/* Contact & Newsletter */}
           <div>
-            <h3 className="font-semibold text-lg mb-4">Resources</h3>
-            <ul className="space-y-2 text-gray-400 text-sm">
-              {resources.map((resource, index) => (
-                <li key={index}>
-                  <a href="#" className="hover:text-white transition-colors" data-testid={`link-resource-${resource.toLowerCase().replace(/\s+/g, '-')}`}>
-                    {resource}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Contact */}
-          <div>
-            <h3 className="font-semibold text-lg mb-4">Get in Touch</h3>
-            <ul className="space-y-2 text-gray-400 text-sm">
-              {contact.map((item, index) => (
-                <li key={index}>
-                  <a href="#" className="hover:text-white transition-colors" data-testid={`link-contact-${item.toLowerCase().replace(/\s+/g, '-')}`}>
-                    {item}
-                  </a>
-                </li>
-              ))}
-            </ul>
-            <div className="flex space-x-4 mt-6">
-              <a 
-                href="#" 
-                className="w-8 h-8 bg-gray-800 hover:bg-gray-700 rounded-lg flex items-center justify-center transition-colors"
-                data-testid="link-social-twitter"
-              >
-                <span className="text-sm">𝕏</span>
-              </a>
-              <a 
-                href="#" 
-                className="w-8 h-8 bg-gray-800 hover:bg-gray-700 rounded-lg flex items-center justify-center transition-colors"
-                data-testid="link-social-linkedin"
-              >
-                <span className="text-sm">in</span>
-              </a>
-              <a 
-                href="#" 
-                className="w-8 h-8 bg-gray-800 hover:bg-gray-700 rounded-lg flex items-center justify-center transition-colors"
-                data-testid="link-social-github"
-              >
-                <span className="text-sm">git</span>
-              </a>
+            <h3 className="font-semibold text-lg mb-6">Stay Connected</h3>
+            <div className="space-y-4 mb-6">
+              <div className="flex items-center text-gray-300">
+                <Mail className="mr-3" size={16} />
+                <span>contact@openaiagent.ai</span>
+              </div>
+              <div className="flex items-center text-gray-300">
+                <Phone className="mr-3" size={16} />
+                <span>+1 (555) 123-4567</span>
+              </div>
+              <div className="flex items-center text-gray-300">
+                <MapPin className="mr-3" size={16} />
+                <span>San Francisco, CA</span>
+              </div>
+            </div>
+            
+            <div>
+              <h4 className="font-medium mb-3">Newsletter</h4>
+              <p className="text-gray-300 text-sm mb-4">
+                Get the latest updates on AI automation and industry insights.
+              </p>
+              <div className="flex gap-2">
+                <Input 
+                  type="email" 
+                  placeholder="Enter your email" 
+                  className="bg-white/10 border-white/20 text-white placeholder:text-gray-400"
+                />
+                <Button className="bg-accent-green hover:bg-accent-green/90 text-white">
+                  Subscribe
+                </Button>
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400 text-sm">
-            © 2024 OpenAI Agent. All rights reserved.
-          </p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors" data-testid="link-privacy">Privacy Policy</a>
-            <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors" data-testid="link-terms">Terms of Service</a>
-            <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors" data-testid="link-security">Security</a>
+        {/* Bottom Footer */}
+        <div className="py-8 border-t border-white/10">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="text-gray-300 text-sm mb-4 md:mb-0">
+              © 2025 OpenAI Agent. All rights reserved.
+            </div>
+            <div className="flex space-x-6 text-sm">
+              <a href="#" className="text-gray-300 hover:text-white transition-colors">Privacy Policy</a>
+              <a href="#" className="text-gray-300 hover:text-white transition-colors">Terms of Service</a>
+              <a href="#" className="text-gray-300 hover:text-white transition-colors">Cookie Policy</a>
+              <a href="#" className="text-gray-300 hover:text-white transition-colors">GDPR</a>
+            </div>
           </div>
         </div>
       </div>
