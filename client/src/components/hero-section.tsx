@@ -36,8 +36,8 @@ export default function HeroSection() {
 
           <div className="relative">
             <img 
-              src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600" 
-              alt="AI network and collaboration dashboard" 
+              src="https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600" 
+              alt="AI agents collaboration interface and dashboard" 
               className="rounded-2xl shadow-2xl mx-auto w-full max-w-4xl"
               data-testid="img-hero-workspace"
             />
