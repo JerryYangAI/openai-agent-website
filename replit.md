@@ -4,6 +4,18 @@
 
 OpenAI Agent is a comprehensive AI workforce platform that enables enterprises to deploy intelligent multi-agent systems for automating complex internal processes. The platform specializes in parallel execution and collaboration between specialized AI agents, allowing businesses to focus on core innovation while AI handles operational tasks. Currently in beta development with closed testing, the platform targets multiple industries including automotive, manufacturing, healthcare, finance, retail, and logistics.
 
+## Recent Changes
+
+**August 14, 2025 - Hero Section Enhancement**
+- Replaced generic stock images with custom AI agent dashboard mockup
+- Created interactive interface showcasing platform capabilities:
+  - Navigation tabs (Dynamic Workforce, Customise Workers, Human in the Loop, etc.)
+  - Active agents panel with real-time status indicators
+  - Agent creation interface matching enterprise workflows
+  - Performance metrics dashboard
+- Improved visual representation to match reference sites (Microsoft Copilot, Eigent.ai)
+- Enhanced professional appearance with brand-consistent design
+
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
