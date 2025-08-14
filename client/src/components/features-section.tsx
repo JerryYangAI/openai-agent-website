@@ -7,7 +7,7 @@ export default function FeaturesSection() {
       icon: UserCog,
       title: "Multi-Agent Collaboration",
       description: "Powered by parallel execution and intelligent coordination. Handle complex, long-horizon tasks faster and more efficiently than single-agent systems.",
-      image: "https://images.unsplash.com/photo-1565043666747-69f6646db940?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
       gradient: "from-blue-50 to-white",
       border: "border-blue-100"
     },
@@ -15,7 +15,7 @@ export default function FeaturesSection() {
       icon: Cog,
       title: "Infinitely Customizable",
       description: "Build specialized agents for any task. Developer agents, search agents, document agents, and multimodal agents tailored to your needs.",
-      image: "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
+      image: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
       gradient: "from-green-50 to-white",
       border: "border-green-100"
     },
@@ -23,7 +23,7 @@ export default function FeaturesSection() {
       icon: Shield,
       title: "Enterprise-Grade Security",
       description: "Your data stays yours, always. Cloud, on-premises, or hybrid deployment with enterprise SSO, access control, and audit trails.",
-      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
+      image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
       gradient: "from-orange-50 to-white",
       border: "border-orange-100"
     }
