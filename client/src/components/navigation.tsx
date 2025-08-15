@@ -83,11 +83,18 @@ export default function Navigation() {
                   Pricing
                 </Link>
                 <Link 
-                  href="/"
-                  className="text-gray-600 hover:text-primary-blue transition-colors"
-                  data-testid="nav-home"
+                  href="/contact"
+                  className={`transition-colors ${location === '/contact' ? 'text-primary-blue font-medium' : 'text-gray-600 hover:text-primary-blue'}`}
+                  data-testid="nav-contact"
                 >
-                  Home
+                  Contact
+                </Link>
+                <Link 
+                  href="/blog"
+                  className={`transition-colors ${location === '/blog' ? 'text-primary-blue font-medium' : 'text-gray-600 hover:text-primary-blue'}`}
+                  data-testid="nav-blog"
+                >
+                  Blog
                 </Link>
               </>
             )}
@@ -119,6 +126,8 @@ export default function Navigation() {
                     <Link href="/features" className="text-left" onClick={() => setIsOpen(false)}>Features</Link>
                     <Link href="/industries" className="text-left" onClick={() => setIsOpen(false)}>Industries</Link>
                     <Link href="/pricing" className="text-left" onClick={() => setIsOpen(false)}>Pricing</Link>
+                    <Link href="/contact" className="text-left" onClick={() => setIsOpen(false)}>Contact</Link>
+                    <Link href="/blog" className="text-left" onClick={() => setIsOpen(false)}>Blog</Link>
                     <Link href="/" className="text-left" onClick={() => setIsOpen(false)}>Home</Link>
                   </>
                 )}

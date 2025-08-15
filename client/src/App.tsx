@@ -7,7 +7,10 @@ import Home from "@/pages/home";
 import Features from "@/pages/features";
 import Industries from "@/pages/industries";
 import Pricing from "@/pages/pricing";
+import Contact from "@/pages/contact";
+import Blog from "@/pages/blog";
 import NotFound from "@/pages/not-found";
+import Analytics from "@/components/analytics";
 
 function Router() {
   return (
@@ -16,6 +19,8 @@ function Router() {
       <Route path="/features" component={Features} />
       <Route path="/industries" component={Industries} />
       <Route path="/pricing" component={Pricing} />
+      <Route path="/contact" component={Contact} />
+      <Route path="/blog" component={Blog} />
       <Route component={NotFound} />
     </Switch>
   );
@@ -25,8 +30,12 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <Toaster />
+        <Analytics 
+          trackingId={import.meta.env.VITE_GA_TRACKING_ID}
+          userId={import.meta.env.VITE_USER_ID}
+        />
         <Router />
+        <Toaster />
       </TooltipProvider>
     </QueryClientProvider>
   );
